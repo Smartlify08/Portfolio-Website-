@@ -49,7 +49,7 @@ const contact_btn = document.querySelector("#contact-btn");
 const body = document.querySelector("body");
 contact_btn.addEventListener("click", () => {
   window.scroll({
-    top: 1000,
+    top: 3000,
     right: 0,
     behavior: "smooth",
   });
