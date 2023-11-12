@@ -44,6 +44,17 @@ btn.href = "journey.html";
 const icon = document.createElement("i");
 icon.className = "fas fa-arrow-right";
 btn.append(icon);
+
+const contact_btn = document.querySelector("#contact-btn");
+const body = document.querySelector("body");
+contact_btn.addEventListener("click", () => {
+  window.scroll({
+    top: 1000,
+    right: 0,
+    behavior: "smooth",
+  });
+});
+
 const spliceStatement = statement_paragraph.textContent
   .slice(0, 150)
   .replace("ate", "....");

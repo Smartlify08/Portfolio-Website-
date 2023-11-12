@@ -106,8 +106,8 @@ img {
   z-index: -1;
   font-size: 4rem;
   position: absolute;
-  top: 22%;
-  right: 45%;
+  top: 25%;
+  right: 47%;
   color: var(--color-3);
   opacity: 0.4;
 }
@@ -119,12 +119,29 @@ img {
 }
 
 .intro .img-box {
-  width: 900px;
+  width: 700px;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  z-index: 1;
 }
 
-.intro .img-box img {
-  animation: borders 3s ease-in 1ms infinite alternate forwards;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;
+.intro img {
+  width: 100%;
+  z-index: 1;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: morph 3s linear infinite, borders 3s linear infinite;
+}
+
+@keyframes morph {
+  0%,
+  100% {
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
 }
 
 .intro h1 {
@@ -148,8 +165,12 @@ img {
   transition: 0.5s;
 }
 
-.intro .btn i {
-  margin-right: 5px;
+.intro .btn a {
+  color: var(--white);
+}
+
+.intro .btn a i {
+  margin-left: 5px;
   font-size: 18px;
 }
 
@@ -202,7 +223,14 @@ img {
 }
 .contact-section .container-sm {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   justify-content: center;
+}
+
+.contact-section h1 {
+  font-size: 30px;
 }
 .contact-section .icons {
   display: flex;
@@ -210,12 +238,16 @@ img {
 }
 .contact-section .icons a {
   font-size: 25px;
-  color: var(--color-2);
+  color: var(--color-3);
 
   transition: 0.5s;
 }
 .contact-section .icons a:hover {
   font-size: 45px;
+}
+
+.contact-section .icons a:nth-of-type(3):hover {
+  color: var(--color-1);
 }
 .contact-section .icons a:nth-of-type(2):hover {
   color: rgb(11, 128, 67);
